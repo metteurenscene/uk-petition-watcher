@@ -166,6 +166,8 @@ function fetchData(id) {
     loadPetition(data);
   }).catch(error => {
     console.log(`error: ${error}`);
+    const fetchingElement = document.getElementById('fetching');
+    fetchingElement.innerText = 'Failed to load petition data. Please try again later';
   });
 }
 
