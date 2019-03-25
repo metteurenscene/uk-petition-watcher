@@ -288,7 +288,11 @@ function handleCountryFilterChange(event) {
 }
 
 function initialise() {
-  fetchData(241584);
+  // check querystring for 'petition=xxxxxx' to extract the petition id
+  const query = window.location.search;
+  let index = query.indexOf('petition=');
+  const petition = query.substring(index + 9, index + 9 + 6);
+  fetchData(petition);
 
   constituencyPrevElement = document.getElementById('constituency-prev');
   constituencyPrevElement.onclick = (e) => {
