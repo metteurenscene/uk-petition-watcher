@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width-=device-width, initial-scale=1">
+
+    <title>UK Petition Watcher</title>
+
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+  </head>
+  <body>
+
+    <div id="fetching">
+      <strong>
+        F&thinsp;E&thinsp;T&thinsp;C&thinsp;H&thinsp;I&thinsp;N&thinsp;G&emsp;P&thinsp;E&thinsp;T&thinsp;I&thinsp;T&thinsp;I&thinsp;O&thinsp;N&emsp;D&thinsp;A&thinsp;T&thinsp;A
+      </strong>
+    </div>
+ 
+    <main hidden>
+      <div id="petition-id"></div>
+      <h1 id="petition-action"></h1>
+      <section id="petition-background"></section>
+      <section><a id="petition-link">Petition website</a></section>
+      <section id="petition-signature_count"></section>
+      <section>
+        <details>
+          <summary><h2>Signatures by constituency</h2></summary>
+          <div id="signatures-constituency">
+            <p>Constituencies are ordered by total number of signatures.</p>
+            <div class="table-controls">
+              <a href="index.html#previous" id="constituency-prev">Prev</a>
+              &nbsp;●&nbsp;
+              <label for="constituency-page">Page&nbsp;</label>
+              <input id="constituency-page" name="constituency-page" type="number" step="1" min="1" max="1"
+              value="1">
+               &nbsp;of&nbsp;<span id="constituency-pages">1</span>
+               &nbsp;●&nbsp;
+              <a href="index.html#next" id="constituency-next">Next</a>
+              <span class="table-filter-box">
+                <label for="constituency-filter">Find:</label>&nbsp;
+                <input id="constituency-filter" name="constituency-filter" type="text">
+              </span>
+            </div>
+            <table id="constituency-table">
+              <thead>
+                <tr><th id="rank-column">#</th><th id="constituency-column">Constituency</th><th
+                    id="mp-column">MP</th><th>Signatures</th></tr>
+              </thead>
+            </table>
+          </div>
+        </details>
+      </section>
+      <section>
+        <details>
+          <summary><h2>Signatures by country</h2></summary>
+          <div id="signatures-country">
+            <p>Countries are ordered by total number of signatures.</p>
+            <div class="table-controls">
+              <a href="index.html#previous" id="country-prev">Prev</a>
+              &nbsp;●&nbsp;
+              <label for="country-page">Page&nbsp;</label>
+              <input id="country-page" name="country-page" type="number" step="1" min="1" max="1" value="1">
+               &nbsp;of&nbsp;<span id="country-pages">1</span>
+               &nbsp;●&nbsp;
+              <a href="index.html#next" id="country-next">Next</a>
+              <span class="table-filter-box">
+                <label for="country-filter">Find:&nbsp;</label>
+                <input id="country-filter" name="country-filter" type="text">
+              </span>
+            </div>
+            <table id="country-table">
+              <thead>
+                <tr><th id="rank-column">#</th><th id="country-column">Country</th><th>Signatures</th></tr>
+              </thead>
+            </table>
+          </div>
+        </details>
+      </section>
+    </main>
+  </body>
+</html>

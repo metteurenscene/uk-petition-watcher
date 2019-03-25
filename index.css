@@ -1,0 +1,148 @@
+html {
+  height: 100%;
+}
+
+body {
+  background: gainsboro;
+  background: repeating-linear-gradient( 25deg, #dcdcdc, #dcdcdc 58px, #ccc, #ccc 60px );
+  background-attachment: fixed;
+}
+
+main {
+  margin: auto;
+  max-width: 49rem;
+}
+
+section {
+  margin-top:1rem;
+}
+
+details h2 {
+  display: inline;
+}
+
+details summary {
+  cursor: pointer;
+}
+
+table {
+  background: gainsboro;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: grey;
+  color: gainsboro;
+}
+
+tr:nth-child(2n) {
+  background: #c0c0c0;
+}
+
+th {
+  font-size: 105%;
+  text-align:left;
+}
+
+td, th {
+  padding: 0.2rem 0.6rem 0.2rem 0.6rem;
+}
+
+th#rank-column {
+  text-align: center;
+}
+
+td#rank-column {
+  text-align: right;
+}
+
+th#constituency-column {
+  width: 54%;
+}
+
+th#mp-column {
+  width: 46%;
+}
+
+th#country-column {
+  width: 19em;
+}
+
+td#signatures-column {
+  text-align: right;
+  padding-right: 1em;
+}
+
+.table-controls {
+  display: flex;
+  margin: 0.2em 0.1em;
+}
+
+.disabled {
+  color: gray;
+  cursor: default;
+}
+
+.table-filter-box {
+  margin-left: auto;
+}
+
+.not-found {
+  background-color: #f37d7d;
+}
+
+#petition-action::before {
+  color: #626262;
+  content: "Petition: ";
+  font-size: 60%;
+}
+
+#petition-background::before {
+  color: #626262;
+  content: "Background: ";
+  font-weight: bold; 
+}
+
+#petition-signature_count {
+  font-size: 175%;
+  font-weight: bold;
+}
+
+#petition-signature_count::before {
+  color: #626262;
+  content: "Signatures: ";
+  font-size: 70%;
+  font-weight: bold;
+}
+
+#petition-id {
+  color: #626262;
+  font-size: 120%;
+  font-weight: bold;
+}
+
+#petition-id::before {
+  content: "Petition data for id ";
+}
+
+#petition-link {
+  font-size: 110%;
+}
+
+#signatures-constituency {
+  max-width: 44em;
+}
+
+#constituency-table,
+#country-table {
+  width: 100%;
+}
+
+#constituency-page,
+#country-page {
+  width: 3em;
+}
+
+#signatures-country {
+  max-width: 30em;
+}
