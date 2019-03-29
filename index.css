@@ -91,6 +91,10 @@ td#signatures-column {
   background-color: #f37d7d;
 }
 
+#fetching {
+  font-weight: bold;
+}
+
 #petition-action::before {
   color: #626262;
   content: "Petition: ";
