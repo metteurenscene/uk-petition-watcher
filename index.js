@@ -241,10 +241,17 @@ function handleConstituencyFilterChange(event) {
   if (filterTerm === '') {
       constituencyFilteredArray = constituencySourceArray;
   } else {
+    // extract the individual search terms (separated by comma ',')
+    const terms = filterTerm.split(',').map(term => term.trim());
+    // filter each constituency for the search terms
     constituencyFilteredArray = constituencySourceArray.filter(c => {
-      return c.name.toLowerCase().includes(filterTerm) || (c.mp !== null && c.mp.toLowerCase().includes(filterTerm));
+      return terms.reduce((acc, term) => {
+        return acc || c.name.toLowerCase().includes(term) ||
+          (c.mp !== null && c.mp.toLowerCase().includes(term));
+      }, false);
     });
   }
+
   constituencyTotalPages = Math.max(1, Math.ceil(constituencyFilteredArray.length / itemsPerPage));
   constituencyPageElement.max = constituencyTotalPages;
   // disable page input if only 1 page is available
@@ -273,10 +280,16 @@ function handleCountryFilterChange(event) {
   if (filterTerm === '') {
       countryFilteredArray = countrySourceArray;
   } else {
+    // extract the individual search terms (separated by comma ',')
+    const terms = filterTerm.split(',').map(term => term.trim());
+    // filter each country for the search terms
     countryFilteredArray = countrySourceArray.filter(c => {
-      return c.name.toLowerCase().includes(filterTerm);
+      return terms.reduce((acc, term) => {
+        return c.name.toLowerCase().includes(filterTerm);
+      }, false);
     });
   }
+
   countryTotalPages = Math.max(1, Math.ceil(countryFilteredArray.length / itemsPerPage));
   countryPageElement.max = countryTotalPages;
   // disable page input if only 1 page is available
