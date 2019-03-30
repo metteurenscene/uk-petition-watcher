@@ -165,9 +165,9 @@ function fetchData(id) {
   }).then(data => {
     loadPetition(data);
   }).catch(error => {
-    console.log(`error: ${error}`);
+    console.log(`error: ${error.message}`);
     const fetchingElement = document.getElementById('fetching');
-    fetchingElement.innerText = 'Failed to load petition data. Please try again later';
+    fetchingElement.innerText = 'Failed to load petition data. Please check the petition id or try again later';
   });
 }
 
@@ -303,8 +303,9 @@ function handleCountryFilterChange(event) {
 function initialise() {
   // check querystring for 'petition=xxxxxx' to extract the petition id
   const query = window.location.search;
-  let index = query.indexOf('petition=');
-  const petition = query.substring(index + 9, index + 9 + 6);
+  const index = query.indexOf('petition=');
+  const endindex = query.indexOf('&', index);
+  const petition = query.substring(index + 9, endindex > 0 ? endindex : query.length);
   fetchData(petition);
 
   constituencyPrevElement = document.getElementById('constituency-prev');
