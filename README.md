@@ -21,3 +21,9 @@ constituency or MP.
 
 Countries are ordered by the total number of signatures the petition reached
 from a country. Use the *Find* box to search for a specific country.
+
+#### Filtering constituencies or countries
+
+The constituencies or countries listed in the respective tables can be limited
+to those that match one or more search terms by typing the desired term(s) into
+the *Find* box. Multiple search terms are separated by comma.
