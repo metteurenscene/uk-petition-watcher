@@ -4,12 +4,12 @@ A simple tool to provide ranked, searchable constituency and country information
 on a petition to the UK parliament and government via
 https://petition.parliament.uk.
 
-### Usage
+### Usage
 
 Call the tool with `https://uk-petition-watcher.glitch.me/?petition=xxxxxx`
 where `xxxxxx` is the petition's 6 digit id. 
 
-### Signature breakdown
+### Signature breakdown
 
 #### Signatures by constituency
 
